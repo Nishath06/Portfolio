@@ -83,7 +83,7 @@ const Hero = () => {
 
         <div className="hero-social">
           <a 
-            href="https://github.com/nishath" 
+            href="https://github.com/Nishath06" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -101,7 +101,7 @@ const Hero = () => {
             <FaLinkedin />
           </a>
           <a 
-            href="mailto:nishath@example.com"
+            href="mailto:jpnishath@gmail.com"
             aria-label="Email"
             className="social-link"
           >
