@@ -1,51 +1,8 @@
-import React, { useState } from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import React from 'react';
+import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const [formStatus, setFormStatus] = useState({
-    submitted: false,
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    // Here you would typically send the form data to a backend service
-    // For now, we'll just show a success message
-    setFormStatus({
-      submitted: true,
-      message: 'Message sent successfully! I\'ll get back to you soon.'
-    });
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      setFormStatus({
-        submitted: false,
-        message: ''
-      });
-    }, 3000);
-  };
 
   const contactInfo = [
     {
@@ -63,8 +20,8 @@ const Contact = () => {
     {
       icon: <FaGithub />,
       label: "GitHub",
-      value: "github.com/nishath",
-      link: "https://github.com/nishath"
+      value: "github.com/Nishath06",
+      link: "https://github.com/Nishath06"
     },
     {
       icon: <FaMapMarkerAlt />,
@@ -141,7 +98,7 @@ const Contact = () => {
                 💼 View LinkedIn
               </a>
               <a 
-                href="https://github.com/nishath" 
+                href="https://github.com/Nishath06" 
                 className="quick-link-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -161,91 +118,6 @@ const Contact = () => {
             </p>
           </div>
         </div>
-
-        {/* Contact Form */}
-        <div className="contact-form-section">
-          <h3 className="contact-subtitle">
-            <span className="prompt">$</span> send-message.sh
-          </h3>
-          
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name" className="form-label">
-                Name <span className="required">*</span>
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="form-input"
-                placeholder="John Doe"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="email" className="form-label">
-                Email <span className="required">*</span>
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="form-input"
-                placeholder="john@example.com"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="subject" className="form-label">
-                Subject <span className="required">*</span>
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                className="form-input"
-                placeholder="Job Opportunity / Collaboration"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message" className="form-label">
-                Message <span className="required">*</span>
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                className="form-textarea"
-                placeholder="Your message here..."
-                rows="6"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              ></textarea>
-            </div>
-
-            {formStatus.submitted && (
-              <div className="form-success">
-                <span className="success-icon">✓</span>
-                {formStatus.message}
-              </div>
-            )}
-
-            <button type="submit" className="form-submit-btn">
-              <FaPaperPlane />
-              <span>Send Message</span>
-            </button>
-          </form>
-        </div>
       </div>
 
       {/* Footer */}
@@ -262,7 +134,7 @@ const Contact = () => {
           
           <div className="footer-social">
             <a 
-              href="https://github.com/nishath" 
+              href="https://github.com/Nishath06" 
               className="footer-social-link"
               target="_blank"
               rel="noopener noreferrer"
@@ -280,7 +152,7 @@ const Contact = () => {
               <FaLinkedin />
             </a>
             <a 
-              href="mailto:nishath.jp@example.com" 
+              href="mailto:jpnishath@gmail.com" 
               className="footer-social-link"
               aria-label="Email"
             >

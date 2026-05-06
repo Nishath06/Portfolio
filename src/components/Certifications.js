@@ -6,37 +6,59 @@ import './Certifications.css';
 const Certifications = () => {
   const certifications = [
     {
+      title: "Red Hat Certified System Administrator",
+      shortName: "RHCSA",
+      provider: "Red Hat",
+      icon: <SiRedhat />,
+      date: "2025",
+      color: "#EE0000",
+      skills: ["Linux Administration", "Shell Scripting", "File Systems", "User Management", "Networking", "Security"],
+      verifyLink: "#",
+      description: "Linux system administration foundation."
+    },
+    {
       title: "AWS Certified Solutions Architect – Associate",
       shortName: "AWS SAA-C03",
       provider: "Amazon Web Services",
       icon: <SiAmazonaws />,
-      date: "2024",
+      date: "2025",
       color: "#FF9900",
       skills: ["VPC Design", "Auto Scaling", "Load Balancers", "ECS/Fargate", "S3", "IAM", "CloudWatch"],
       verifyLink: "#",
-      description: "Designing distributed systems and cloud architectures on AWS with focus on security, cost-optimization, and high availability"
+      description: "Cloud architecture design, scalability, and security."
     },
     {
       title: "Microsoft Certified: Azure Administrator Associate",
       shortName: "AZ-104",
       provider: "Microsoft",
       icon: <SiMicrosoftazure />,
-      date: "2024",
+      date: "2026",
       color: "#0078D4",
       skills: ["Azure VMs", "Virtual Networks", "Storage Accounts", "Azure AD", "Resource Manager", "Monitoring"],
       verifyLink: "#",
-      description: "Managing Azure subscriptions, implementing storage solutions, configuring virtual networking, and managing identities"
+      description: "Azure infrastructure management and automation."
     },
     {
-      title: "Red Hat Certified System Administrator",
-      shortName: "RHCSA",
-      provider: "Red Hat",
-      icon: <SiRedhat />,
-      date: "2023",
-      color: "#EE0000",
-      skills: ["Linux Administration", "Shell Scripting", "File Systems", "User Management", "Networking", "Security"],
+      title: "Microsoft Certified: Azure DevOps Engineer Expert",
+      shortName: "AZ-400",
+      provider: "Microsoft",
+      icon: <SiMicrosoftazure />,
+      date: "2026",
+      color: "#0078D4",
+      skills: ["CI/CD Pipelines", "Infrastructure as Code", "Azure DevOps", "Monitoring", "Security", "GitOps"],
       verifyLink: "#",
-      description: "Hands-on Linux system administration skills including managing local storage, configuring security, and performing essential system tasks"
+      description: "Advanced CI/CD, IaC, and DevOps practices."
+    },
+    {
+      title: "AWS Certified Cloud Operations Associate",
+      shortName: "AWS CloudOps",
+      provider: "Amazon Web Services",
+      icon: <SiAmazonaws />,
+      date: "2026",
+      color: "#FF9900",
+      skills: ["Cloud Operations", "Monitoring", "Automation", "Incident Response", "Cost Optimization", "Compliance"],
+      verifyLink: "#",
+      description: "Cloud operations, monitoring, and automation at scale."
     }
   ];
 
@@ -46,11 +68,10 @@ const Certifications = () => {
 
       <div className="cert-intro">
         <p className="terminal-command">
-          <span className="prompt">$</span> cat /credentials/certifications.json | jq .
+          <span className="prompt">$</span> certs --show-progression
         </p>
         <p className="cert-description">
-          Multi-cloud certified with hands-on validation from AWS, Azure, and Red Hat. 
-          These aren't just badges—they represent real infrastructure skills tested in production scenarios.
+          Certification roadmap demonstrating progression from cloud fundamentals to DevOps expertise. Recent achievements validate production-ready skills in AWS and Azure.
         </p>
       </div>
 
@@ -110,23 +131,6 @@ const Certifications = () => {
         ))}
       </div>
 
-      <div className="cert-next-goals">
-        <div className="next-cert-card">
-          <h3 className="next-cert-title">
-            <span className="prompt">$</span> next-certification.sh --target
-          </h3>
-          <div className="next-cert-content">
-            <div className="next-cert-item">
-              <SiMicrosoftazure className="next-cert-icon" />
-              <div>
-                <h4>AZ-400: DevOps Engineer Expert</h4>
-                <p>Advanced CI/CD, Infrastructure as Code, and DevOps practices on Azure</p>
-                <span className="status-badge in-progress">In Progress</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

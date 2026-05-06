@@ -1,0 +1,98 @@
+.expertise {
+  background: var(--bg-primary);
+  padding: 100px 0;
+}
+
+.expertise-intro {
+  margin-bottom: 60px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.terminal-command {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--accent-primary);
+  margin-bottom: 15px;
+}
+
+.terminal-command .prompt {
+  margin-right: 10px;
+}
+
+.expertise-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  line-height: 1.8;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.expertise-card {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 30px;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.expertise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(2, 12, 27, 0.7);
+  border-color: var(--accent-primary);
+}
+
+.expertise-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.expertise-icon {
+  font-size: 2rem;
+  color: var(--accent-primary);
+  margin-right: 15px;
+}
+
+.expertise-header h3 {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.expertise-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expertise-points li {
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 20px;
+}
+
+.expertise-points li:before {
+  content: "▸";
+  color: var(--accent-primary);
+  position: absolute;
+  left: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

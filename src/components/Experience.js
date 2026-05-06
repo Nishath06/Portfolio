@@ -5,47 +5,62 @@ import './Experience.css';
 const Experience = () => {
   const experiences = [
     {
-      role: "Angular Developer Intern",
-      company: "Infosys SpringBoard",
+      role: "DevOps Intern",
+      company: "Shamgar Software Solutions",
       type: "Internship",
-      duration: "2024",
-      icon: <FaCode />,
-      description: "Developed RESTful APIs and backend systems using modern Python frameworks and database technologies.",
+      duration: "Oct 2025 – Mar 2026",
+      icon: <FaBriefcase />,
+      description: "Engineered and deployed ML inference services and built cloud-native architectures.",
       responsibilities: [
-        "Built RESTful APIs using FastAPI with PostgreSQL integration",
-        "Implemented database migrations using Alembic for version control",
-        "Designed and optimized database schemas for efficient data operations",
-        "Developed complete CRUD operations with proper error handling",
-        "Collaborated with frontend team for API integration",
-        "Wrote API documentation and maintained code standards"
+        "Engineered and deployed ML inference services as production-ready APIs using FastAPI, enabling real-time prediction workflows.",
+        "Designed and implemented a scalable data pipeline for BCI systems, handling data ingestion, processing, and storage.",
+        "Deployed an AI-based agricultural application on AWS with a focus on scalability, availability, and performance optimization.",
+        "Containerized applications using Docker and configured cloud infrastructure to support reliable deployments.",
+        "Collaborated on building cloud-native architectures emphasizing scalability, monitoring, and maintainability."
       ],
-      technologies: ["FastAPI", "PostgreSQL", "Alembic", "Python", "Angular", "REST APIs"],
+      technologies: ["FastAPI", "AWS", "Docker", "CI/CD", "Cloud Infrastructure", "Python"],
       achievements: [
-        "Successfully delivered multiple API endpoints on schedule",
-        "Improved query performance through database optimization",
-        "Implemented secure authentication patterns"
+        "Deployed production-ready APIs for ML inference",
+        "Built scalable data pipeline for BCI systems",
+        "Implemented reliable application containerization"
       ]
     },
     {
-      role: "Frontend Web Development Intern",
-      company: "Edunet AICTE",
+      role: "Cloud Computing Intern",
+      company: "Elevate Labs (Skill India)",
       type: "Internship",
-      duration: "2023",
-      icon: <FaGraduationCap />,
-      description: "Focused on building responsive and accessible web interfaces following modern frontend development practices.",
+      duration: "Oct 2025 – Dec 2025",
+      icon: <FaBriefcase />,
+      description: "Developed cloud-based systems and APIs, recognized as Best Performer India.",
       responsibilities: [
-        "Developed responsive web interfaces using HTML5, CSS3, and JavaScript",
-        "Implemented mobile-first design principles",
-        "Ensured cross-browser compatibility and accessibility standards",
-        "Optimized frontend performance and loading times",
-        "Collaborated in agile development environment",
-        "Maintained clean, maintainable code following best practices"
+        "Developed a cloud-based file management system with secure upload, retrieval, and deletion features.",
+        "Built REST APIs using Node.js and implemented JWT-based authentication and role-based access.",
+        "Integrated MongoDB Atlas and deployed application with CI/CD and secure endpoints."
       ],
-      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Web Accessibility"],
+      technologies: ["Node.js", "MongoDB Atlas", "REST APIs", "JWT", "CI/CD", "Cloud Computing"],
       achievements: [
-        "Built multiple responsive web components",
-        "Achieved 95+ Lighthouse performance scores",
-        "Implemented WCAG 2.1 accessibility guidelines"
+        "Achieved Best Performer recognition for outstanding contribution",
+        "Developed secure cloud file management system",
+        "Implemented comprehensive authentication system"
+      ]
+    },
+    {
+      role: "Angular Developer Intern",
+      company: "Infosys Springboard",
+      type: "Internship",
+      duration: "Oct 2025 – Dec 2025",
+      icon: <FaCode />,
+      description: "Developed a civic issue reporting platform with scalable architecture and fast response times.",
+      responsibilities: [
+        "Developed civic issue reporting platform with real-time tracking and role-based dashboards.",
+        "Built 8+ Angular components and integrated 15+ REST APIs, improving response time by 30%.",
+        "Designed scalable database schema for users, complaints, and interactions."
+      ],
+      technologies: ["Angular", "REST APIs", "Database Design", "Frontend Development"],
+      achievements: [
+        "Improved API response time by 30%",
+        "Built comprehensive role-based dashboards",
+        "Designed scalable database architectures"
       ]
     }
   ];
@@ -56,11 +71,10 @@ const Experience = () => {
 
       <div className="experience-intro">
         <p className="terminal-command">
-          <span className="prompt">$</span> work-history --format detailed
+          <span className="prompt">$</span> experience --impact-focused
         </p>
         <p className="experience-description">
-          Hands-on internship experience in full-stack development, from backend API design 
-          to frontend implementation. Focus on production-quality code and real-world problem solving.
+          Hands-on DevOps experience building scalable systems and automating deployments.
         </p>
       </div>
 
@@ -139,22 +153,22 @@ const Experience = () => {
             <div className="summary-item">
               <div className="summary-icon">💡</div>
               <div>
-                <h4>Full-Stack Exposure</h4>
-                <p>Experience across backend APIs, database design, and frontend interfaces</p>
+                <h4>Scalable Systems</h4>
+                <p>Designed architectures handling high traffic and auto-scaling</p>
               </div>
             </div>
             <div className="summary-item">
               <div className="summary-icon">🔧</div>
               <div>
-                <h4>Production Mindset</h4>
-                <p>Focus on code quality, performance optimization, and best practices</p>
+                <h4>Automation Focus</h4>
+                <p>Built CI/CD pipelines reducing manual errors by 80%</p>
               </div>
             </div>
             <div className="summary-item">
-              <div className="summary-icon">🚀</div>
+              <div className="summary-icon">🔒</div>
               <div>
-                <h4>DevOps Ready</h4>
-                <p>Understanding of the full development lifecycle from code to deployment</p>
+                <h4>Security Integration</h4>
+                <p>Implemented DevSecOps practices in all deployments</p>
               </div>
             </div>
           </div>

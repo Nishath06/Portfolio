@@ -1,75 +1,71 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
-  SiRaspberrypi, 
-  SiNginx, 
-  SiDocker, 
   SiAmazonaws, 
-  SiMongodb,
-  SiNodedotjs,
-  SiExpress
+  SiDocker
 } from 'react-icons/si';
 import { 
   FaGithub,
   FaExternalLinkAlt,
   FaCloud,
-  FaServer,
-  FaDatabase,
   FaShieldAlt,
   FaDollarSign,
-  FaChartLine
+  FaChartLine,
+  FaCogs
 } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(0);
 
   const projects = [
     {
       id: 1,
-      title: "Edge–Cloud Distributed Task Manager",
-      tagline: "Production-grade edge-to-cloud architecture",
+      title: "End-to-End DevSecOps Pipeline on AWS",
+      tagline: "DevSecOps pipeline with security scanning and container orchestration",
       featured: true,
-      tech: ["Raspberry Pi", "Nginx", "Docker", "AWS ECS", "Fargate", "MongoDB Atlas", "Node.js", "Express"],
+      tech: ["Jenkins", "EKS", "Docker", "Trivy", "SonarQube"],
       icons: [
-        <SiRaspberrypi />,
-        <SiNginx />,
+        <SiAmazonaws />,
         <SiDocker />,
         <SiAmazonaws />,
-        <SiMongodb />,
-        <SiNodedotjs />
+        <SiAmazonaws />,
+        <SiAmazonaws />
       ],
-      description: "Designed and deployed a full-stack distributed task management system demonstrating real-world edge-to-cloud integration. Raspberry Pi serves as production edge server hosting static frontend via Nginx, communicating with a containerized Node.js backend on AWS ECS (Fargate), backed by MongoDB Atlas.",
+      description: "Designed and implemented a CI/CD pipeline automating build, test, security scanning, and deployment workflows with Trivy and SonarQube quality gates.",
       
+      caseStudy: {
+        problem: "Need for automated deployment workflows and reliable security scanning.",
+        solution: "Implemented automated DevSecOps pipeline with security scanning and container orchestration.",
+        tools: "Jenkins, EKS, Docker, Trivy, SonarQube",
+        impact: "Integrated vulnerability detection, enforced quality gates, and scalable Kubernetes-based deployments."
+      },
+
       architecture: {
         layers: [
           {
-            name: "Edge Layer",
-            icon: <FaServer />,
+            name: "CI/CD Pipeline",
+            icon: <FaCogs />,
             components: [
-              "Raspberry Pi 4 (Production edge server)",
-              "Nginx (Static file hosting, reverse proxy)",
-              "HTML/CSS/JavaScript frontend",
-              "Health monitoring & logging"
+              "Jenkins: Orchestration and automation",
+              "GitHub Actions: Additional CI workflows",
+              "AWS CodePipeline: Cloud-native CI/CD"
             ]
           },
           {
-            name: "Cloud Compute",
+            name: "Security Layer",
+            icon: <FaShieldAlt />,
+            components: [
+              "Trivy: Container vulnerability scanning",
+              "SonarQube: Code quality and security analysis",
+              "OWASP ZAP: Dynamic security testing"
+            ]
+          },
+          {
+            name: "Deployment",
             icon: <FaCloud />,
             components: [
-              "AWS ECS with Fargate (Serverless containers)",
-              "Node.js + Express REST API",
-              "Docker multi-stage builds",
-              "Auto-scaling & Load balancing"
-            ]
-          },
-          {
-            name: "Data Layer",
-            icon: <FaDatabase />,
-            components: [
-              "MongoDB Atlas (Managed NoSQL)",
-              "IP whitelisting & authentication",
-              "Automated backups",
-              "High availability across regions"
+              "EKS: Kubernetes orchestration",
+              "Docker: Containerization",
+              "Helm: Package management"
             ]
           }
         ]
@@ -78,86 +74,63 @@ const Projects = () => {
       highlights: [
         {
           icon: <FaShieldAlt />,
-          title: "Security First",
+          title: "Security Integration",
           points: [
-            "CORS configuration for cross-origin requests",
-            "Environment variable management",
-            "MongoDB Atlas IP whitelisting",
-            "HTTPS communication",
-            "Role-based access patterns"
+            "Automated vulnerability scanning in CI/CD",
+            "Code quality gates with SonarQube",
+            "Container security with Trivy",
+            "Compliance checks and reporting"
           ]
         },
         {
           icon: <FaChartLine />,
-          title: "Scalability",
+          title: "Scalability & Performance",
           points: [
-            "Stateless API design",
-            "Horizontal scaling with Fargate",
-            "Load balancer integration",
-            "CDN-ready architecture",
-            "Database connection pooling"
+            "Horizontal pod autoscaling on EKS",
+            "Load balancing with ALB",
+            "Monitoring with CloudWatch",
+            "Performance optimization"
           ]
         },
         {
           icon: <FaDollarSign />,
-          title: "Cost Efficiency",
+          title: "Cost & Efficiency",
           points: [
-            "MongoDB Atlas free tier (512MB)",
-            "Fargate spot instances",
-            "Edge caching reduces cloud calls",
-            "Estimated: ₹800-1200/month",
-            "Pay-per-use model"
+            "Spot instances for cost reduction",
+            "Automated scaling based on demand",
+            "Resource optimization",
+            "Faster time-to-market"
           ]
         }
       ],
 
-      technicalDecisions: [
-        {
-          question: "Why Raspberry Pi?",
-          answer: "Demonstrates edge computing principles. Simulates IoT/edge scenarios where compute happens close to users, reducing latency and cloud costs."
-        },
-        {
-          question: "Why AWS ECS Fargate?",
-          answer: "Serverless container orchestration eliminates server management. Scales automatically based on demand and follows cloud-native best practices."
-        },
-        {
-          question: "Why MongoDB Atlas?",
-          answer: "Managed database removes operational overhead. Built-in replication, backups, and monitoring. Perfect for microservices architecture."
-        },
-        {
-          question: "Why Docker?",
-          answer: "Ensures reproducibility across environments. Simplifies deployment, enables CI/CD, and follows 12-factor app principles."
-        }
-      ],
-
       outcomes: [
-        "End-to-end CRUD operations with 99.9% uptime",
-        "Successfully handled concurrent user requests",
-        "Demonstrated cloud-native architecture patterns",
-        "Cost-optimized solution meeting SLA requirements",
-        "Hands-on experience with production deployment"
+        "Automated build, test, and security scanning workflows",
+        "Enforced quality gates for secure deployments",
+        "Containerized applications using Docker",
+        "Deployed to Amazon EKS for scalable deployment"
       ],
 
-      github: "https://github.com/nishath/edge-cloud-task-manager",
-      live: "http://raspberry-pi-edge.local",
+      github: "https://github.com/Nishath06/DevSecOps-demo-project-code",
+      live: "#",
       documentation: "#"
     }
   ];
 
   const otherProjects = [
     {
-      title: "Angular Task Management API",
-      description: "RESTful API built with FastAPI and PostgreSQL during Infosys SpringBoard internship. Implemented Alembic migrations and complete CRUD operations.",
-      tech: ["FastAPI", "PostgreSQL", "Alembic", "Python", "Angular"],
-      github: "#",
-      category: "Backend Development"
+      title: "Multi-Cloud DevSecOps CI/CD Pipeline",
+      description: "Built an end-to-end CI/CD pipeline using Azure DevOps with Kubernetes deployment. Configured AWS EC2 self-hosted agents and automated builds using Maven. Enabled multi-cloud deployment across AWS and Azure with Docker-based containerization.",
+      tech: ["Azure DevOps", "AWS EC2", "Docker", "Kubernetes", "Maven"],
+      github: "https://github.com/Nishath06/devsecops-cicd-pipeline-azure-aws-BoardGame-",
+      category: "CI/CD & DevOps"
     },
     {
-      title: "Frontend Web Components",
-      description: "Modern responsive web interfaces developed during Edunet AICTE internship. Focus on accessibility, performance, and mobile-first design.",
-      tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      title: "Secure File Transfer & Encryption API",
+      description: "Developed a secure API using hybrid encryption (RSA + ECC) for encrypted file transfer and key management. Built REST endpoints and designed backend architecture ensuring end-to-end encryption and data integrity.",
+      tech: ["FastAPI", "PostgreSQL", "RSA", "ECC"],
       github: "#",
-      category: "Frontend Development"
+      category: "Security & Backend"
     }
   ];
 
@@ -182,8 +155,8 @@ const Projects = () => {
           </div>
           
           <div className="project-tech-icons">
-            {mainProject.icons.map((icon, index) => (
-              <span key={index} className="tech-icon">{icon}</span>
+            {mainProject.tech.map((tech, index) => (
+              <span key={index} className="tech-icon">{mainProject.tech[index] === 'Jenkins' ? <SiAmazonaws /> : mainProject.tech[index] === 'EKS' ? <SiAmazonaws /> : mainProject.tech[index] === 'Docker' ? <SiDocker /> : mainProject.tech[index] === 'Trivy' ? <SiAmazonaws /> : mainProject.tech[index] === 'SonarQube' ? <SiAmazonaws /> : <SiAmazonaws />}</span>
             ))}
           </div>
         </div>
@@ -195,6 +168,58 @@ const Projects = () => {
         </div>
 
         <p className="project-description">{mainProject.description}</p>
+
+        {/* Case Study */}
+        <div className="case-study-section">
+          <h4 className="case-study-title">
+            <span className="prompt">$</span> case-study --detailed
+          </h4>
+          
+          <div className="case-study-content">
+            <div className="case-study-item">
+              <h5>Problem:</h5>
+              <p>{mainProject.caseStudy.problem}</p>
+            </div>
+            <div className="case-study-item">
+              <h5>Solution:</h5>
+              <p>{mainProject.caseStudy.solution}</p>
+            </div>
+            <div className="case-study-item">
+              <h5>Tools:</h5>
+              <p>{mainProject.caseStudy.tools}</p>
+            </div>
+            <div className="case-study-item">
+              <h5>Impact:</h5>
+              <p>{mainProject.caseStudy.impact}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Case Study */}
+        <div className="case-study-section">
+          <h4 className="case-study-title">
+            <span className="prompt">$</span> case-study --detailed
+          </h4>
+          
+          <div className="case-study-content">
+            <div className="case-study-item">
+              <h5>Problem:</h5>
+              <p>{mainProject.caseStudy.problem}</p>
+            </div>
+            <div className="case-study-item">
+              <h5>Solution:</h5>
+              <p>{mainProject.caseStudy.solution}</p>
+            </div>
+            <div className="case-study-item">
+              <h5>Tools:</h5>
+              <p>{mainProject.caseStudy.tools}</p>
+            </div>
+            <div className="case-study-item">
+              <h5>Impact:</h5>
+              <p>{mainProject.caseStudy.impact}</p>
+            </div>
+          </div>
+        </div>
 
         {/* Architecture Diagram */}
         <div className="architecture-section">
@@ -246,22 +271,6 @@ const Projects = () => {
                     <li key={pointIndex}>{point}</li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Technical Decisions */}
-        <div className="decisions-section">
-          <h4 className="decisions-title">
-            <span className="prompt">$</span> why-this-stack.md
-          </h4>
-          
-          <div className="decisions-grid">
-            {mainProject.technicalDecisions.map((decision, index) => (
-              <div key={index} className="decision-card">
-                <h5 className="decision-question">{decision.question}</h5>
-                <p className="decision-answer">{decision.answer}</p>
               </div>
             ))}
           </div>

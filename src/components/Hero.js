@@ -5,7 +5,7 @@ import './Hero.css';
 
 const Hero = () => {
   const [displayedText, setDisplayedText] = useState('');
-  const fullText = "Cloud & DevOps Engineer";
+  const fullText = "Building Scalable Cloud Systems & CI/CD Pipelines";
 
   useEffect(() => {
     let index = 0;
@@ -42,8 +42,7 @@ const Hero = () => {
         </h1>
 
         <h2 className="hero-title">
-          <span className="typing-text">{displayedText}</span>
-          <span className="cursor">|</span>
+          DevOps Engineer | AWS Certified | Cloud Architect
         </h2>
 
         <div className="hero-certifications">
@@ -51,33 +50,40 @@ const Hero = () => {
             <SiAmazonaws className="cert-icon" />
             <span>AWS SAA</span>
           </div>
-          <div className="cert-badge" title="Microsoft Certified: Azure Administrator Associate">
-            <SiMicrosoftazure className="cert-icon" />
-            <span>AZ-104</span>
+          <div className="cert-badge" title="AWS Certified CloudOps Associate">
+            <SiAmazonaws className="cert-icon" />
+            <span>AWS CloudOps</span>
           </div>
-          <div className="cert-badge" title="Red Hat Certified System Administrator">
-            <SiRedhat className="cert-icon" />
-            <span>RHCSA</span>
+          <div className="cert-badge" title="Azure DevOps Engineer Expert">
+            <SiMicrosoftazure className="cert-icon" />
+            <span>AZ-400</span>
           </div>
         </div>
 
         <p className="hero-description">
-          Multi-cloud certified engineer specializing in cloud architecture, container orchestration,
-          and production-grade distributed systems. Building scalable edge-to-cloud solutions with
-          <span className="highlight"> AWS</span>, <span className="highlight">Azure</span>, and
-          <span className="highlight"> modern DevOps practices</span>.
+          DevOps Engineer specializing in scalable cloud architectures, automated CI/CD pipelines, and production deployments. Certified in AWS and Azure, with hands-on experience deploying secure, high-availability systems using Kubernetes, Docker, and DevSecOps tools. Ready to architect and automate your infrastructure.
         </p>
 
         <div className="hero-cta">
           <button className="btn btn-primary" onClick={scrollToContact}>
-            Get In Touch
+            Hire Me for DevOps
           </button>
           <a 
-            href="/resume.pdf" 
-            className="btn btn-secondary" 
+            href="#projects" 
+            className="btn btn-secondary"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            View My DevOps Projects
+          </a>
+          <a
+            href="/resume.pdf"
+            className="btn btn-secondary"
             download="Nishath_JP_Resume.pdf"
           >
-            Download Resume
+            📄 Download Resume
           </a>
         </div>
 

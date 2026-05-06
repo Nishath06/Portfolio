@@ -6,18 +6,18 @@ const About = () => {
   const highlights = [
     {
       icon: <FaCloud />,
-      title: "Multi-Cloud Certified",
-      description: "AWS Solutions Architect & Azure Administrator with hands-on experience designing scalable cloud architectures"
+      title: "Cloud Architecture Expert",
+      description: "Designed and deployed scalable AWS/Azure systems with auto-scaling and multi-AZ redundancy"
     },
     {
       icon: <FaServer />,
-      title: "Production-Ready Mindset",
-      description: "Focus on security, scalability, and cost-optimization. Building systems that work in the real world"
+      title: "CI/CD Pipeline Builder",
+      description: "Automated deployments using Jenkins, GitHub Actions, and AWS CodePipeline for faster, reliable releases"
     },
     {
       icon: <FaShieldAlt />,
-      title: "Infrastructure as Code",
-      description: "Linux systems administration (RHCSA), containerization with Docker, and automation-first approach"
+      title: "DevSecOps Practitioner",
+      description: "Integrated security scanning (Trivy, SonarQube) into pipelines, ensuring compliant and secure production environments"
     }
   ];
 
@@ -40,22 +40,13 @@ const About = () => {
                 <span className="command">$ cat about.txt</span>
               </p>
               <p className="output">
-                I'm a Cloud & DevOps Engineer who thinks in infrastructure. With certifications from 
-                <span className="highlight"> AWS</span>, <span className="highlight">Azure</span>, and 
-                <span className="highlight"> Red Hat</span>, I bring a production-first approach to building 
-                distributed systems.
+                I'm a DevOps Engineer who transforms complex infrastructure challenges into automated, scalable solutions. Starting with Linux system administration (RHCSA), I progressed to cloud architecture (AWS SAA) and DevOps mastery (AZ-400), building production systems that handle real-world scale.
               </p>
               <p className="output">
-                My work focuses on the intersection of <span className="highlight">edge computing</span> and 
-                <span className="highlight"> cloud orchestration</span>—designing systems that are secure, 
-                scalable, and cost-efficient. Whether it's containerizing applications with Docker, deploying 
-                on ECS Fargate, or configuring VPCs with proper security groups, I focus on making systems 
-                that actually work in production.
+                My journey includes architecting multi-cloud CI/CD pipelines, securing APIs with encryption, and deploying containerized applications on Kubernetes. I focus on what matters: designing systems that scale, automating deployments, and implementing security from the ground up.
               </p>
               <p className="output">
-                Currently exploring advanced DevOps practices and preparing for the 
-                <span className="highlight"> AZ-400 DevOps Engineer Expert</span> certification to deepen 
-                my CI/CD and automation expertise.
+                Currently, I'm deepening my expertise in Kubernetes orchestration and advanced DevSecOps practices to deliver enterprise-grade infrastructure.
               </p>
               <p className="terminal-line">
                 <span className="prompt">nishath@cloud:</span>

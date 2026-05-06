@@ -24,57 +24,53 @@ import './Skills.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Cloud Platforms",
+      title: "Primary Cloud (AWS)",
       icon: "☁️",
       skills: [
-        { name: "AWS", icon: <SiAmazonaws />, level: 85, description: "VPC, ECS, Fargate, Auto Scaling, Load Balancer" },
-        { name: "Azure", icon: <SiMicrosoftazure />, level: 80, description: "VM, Storage, Networking, Azure AD" }
+        { name: "AWS", icon: <SiAmazonaws />, level: 95, description: "VPC, ECS/Fargate, EKS, Lambda, Auto Scaling, ALB, CloudWatch" },
+        { name: "AWS DevOps Tools", icon: <SiAmazonaws />, level: 90, description: "CodePipeline, CodeBuild, CloudFormation, IAM" }
       ]
     },
     {
-      title: "DevOps & Infrastructure",
+      title: "Secondary Cloud (Azure)",
+      icon: "🔵",
+      skills: [
+        { name: "Azure", icon: <SiMicrosoftazure />, level: 85, description: "VMs, Virtual Networks, AKS, Azure DevOps, Resource Manager" },
+        { name: "Azure DevOps", icon: <SiMicrosoftazure />, level: 90, description: "Pipelines, Artifacts, Test Plans" }
+      ]
+    },
+    {
+      title: "Containerization & Orchestration",
+      icon: "🐳",
+      skills: [
+        { name: "Kubernetes", icon: <SiAmazonaws />, level: 85, description: "Deployments, Services, ConfigMaps, Helm" },
+        { name: "Docker", icon: <SiDocker />, level: 90, description: "Multi-stage builds, Compose, Swarm" }
+      ]
+    },
+    {
+      title: "CI/CD & Automation",
       icon: "🔧",
       skills: [
-        { name: "Docker", icon: <SiDocker />, level: 85, description: "Containerization, Multi-stage builds" },
-        { name: "Nginx", icon: <SiNginx />, level: 75, description: "Reverse proxy, Load balancing" },
-        { name: "Git", icon: <SiGit />, level: 90, description: "Version control, Branching strategies" },
-        { name: "GitHub", icon: <SiGithub />, level: 85, description: "CI/CD, Actions, Collaboration" }
+        { name: "Jenkins", icon: <SiAmazonaws />, level: 85, description: "Pipelines, Plugins, Master-Agent setups" },
+        { name: "GitHub Actions", icon: <SiGithub />, level: 80, description: "Workflows, Self-hosted runners" },
+        { name: "Git", icon: <SiGit />, level: 95, description: "Branching, Rebasing, GitOps workflows" }
       ]
     },
     {
-      title: "Operating Systems",
-      icon: "🐧",
+      title: "Security & Monitoring",
+      icon: "🔒",
       skills: [
-        { name: "Red Hat", icon: <SiRedhat />, level: 85, description: "RHCSA certified, System administration" },
-        { name: "Ubuntu", icon: <SiUbuntu />, level: 80, description: "Server setup, Package management" },
-        { name: "Linux", icon: <SiLinux />, level: 85, description: "Shell scripting, Bash automation" },
-        { name: "VMware", icon: <SiVmware />, level: 70, description: "Virtualization, VM management" }
+        { name: "DevSecOps Tools", icon: <SiAmazonaws />, level: 85, description: "Trivy, SonarQube, OWASP ZAP" },
+        { name: "Monitoring", icon: <SiAmazonaws />, level: 80, description: "Prometheus, Grafana, ELK Stack" }
       ]
     },
     {
-      title: "Backend Development",
+      title: "Backend & Databases",
       icon: "⚙️",
       skills: [
-        { name: "Node.js", icon: <SiNodedotjs />, level: 80, description: "REST APIs, Async programming" },
-        { name: "Express", icon: <SiExpress />, level: 80, description: "API development, Middleware" },
-        { name: "FastAPI", icon: <SiFastapi />, level: 75, description: "Python APIs, Async endpoints" },
-        { name: "Python", icon: <SiPython />, level: 75, description: "Scripting, Automation" }
-      ]
-    },
-    {
-      title: "Databases",
-      icon: "🗄️",
-      skills: [
-        { name: "MongoDB", icon: <SiMongodb />, level: 80, description: "Atlas, Aggregation, Indexing" },
-        { name: "PostgreSQL", icon: <SiPostgresql />, level: 75, description: "Relational design, Queries" }
-      ]
-    },
-    {
-      title: "Edge Computing",
-      icon: "🔌",
-      skills: [
-        { name: "Raspberry Pi", icon: <SiRaspberrypi />, level: 85, description: "Edge servers, Production deployment" },
-        { name: "Shell/Bash", icon: <SiShell />, level: 80, description: "Automation scripts, System tasks" }
+        { name: "FastAPI", icon: <SiNodedotjs />, level: 80, description: "REST APIs, Async endpoints, Security" },
+        { name: "PostgreSQL", icon: <SiPostgresql />, level: 75, description: "Queries, Indexing, Encryption" },
+        { name: "MongoDB", icon: <SiMongodb />, level: 75, description: "Atlas, Aggregation, Security" }
       ]
     }
   ];
@@ -85,11 +81,10 @@ const Skills = () => {
       
       <div className="skills-intro">
         <p className="terminal-command">
-          <span className="prompt">$</span> skills --list --verbose
+          <span className="prompt">$</span> skills --devops --cloud
         </p>
         <p className="skills-description">
-          Production-tested stack spanning multi-cloud environments, container orchestration, 
-          and full-stack development. Focus on scalability, security, and automation.
+          Production-tested stack for cloud engineering and DevOps automation. AWS is my primary cloud platform, with deep expertise in containerization, CI/CD, and security.
         </p>
       </div>
 
@@ -145,11 +140,9 @@ const Skills = () => {
             <span className="prompt">$</span> currently-learning.sh
           </h3>
           <div className="learning-items">
-            <span className="learning-badge">Kubernetes (K8s)</span>
-            <span className="learning-badge">Terraform</span>
-            <span className="learning-badge">AZ-400 DevOps Expert</span>
-            <span className="learning-badge">CI/CD Pipelines</span>
-            <span className="learning-badge">GitHub Actions</span>
+            <span className="learning-badge">Advanced Kubernetes (CKA prep)</span>
+            <span className="learning-badge">Terraform for IaC</span>
+            <span className="learning-badge">AWS Advanced Architecting</span>
           </div>
         </div>
       </div>

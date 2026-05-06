@@ -51,6 +51,15 @@ const Navigation = ({ activeSection }) => {
               <span className="nav-text">{item.name}</span>
             </button>
           ))}
+          <a
+            href="/resume.pdf"
+            className="nav-item resume-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ animationDelay: `${navItems.length * 0.1}s`, border: '1px solid #64ffda', borderRadius: '4px', padding: '0.2rem 0.5rem', marginLeft: '1rem', textDecoration: 'none' }}
+          >
+            <span className="nav-text" style={{color: '#64ffda'}}>Resume</span>
+          </a>
         </div>
 
         <button 
