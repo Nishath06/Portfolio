@@ -83,7 +83,7 @@ const Contact = () => {
             <h4 className="quick-links-title">Quick Actions</h4>
             <div className="quick-links-buttons">
               <a 
-                href="/resume.pdf" 
+                href={process.env.PUBLIC_URL + "/resume.pdf"} 
                 className="quick-link-btn"
                 download="Nishath_JP_Resume.pdf"
               >
